@@ -17,4 +17,9 @@ public class UsuarioEntity {
     private String login;
     private String senha;
 
+    public UsuarioEntity(String login, String senha) {
+        this.login = login;
+        this.senha = senha;
+    }
+
 }
