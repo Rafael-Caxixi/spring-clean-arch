@@ -4,6 +4,6 @@ import com.rafaelcaxixi.spring_boot_cleanarch.domain.usuario.UsuarioDomain;
 
 public interface CriarUsuarioUseCase {
 
-    void execute(UsuarioDomain usuario);
+    UsuarioDomain execute(UsuarioDomain usuario);
 
 }

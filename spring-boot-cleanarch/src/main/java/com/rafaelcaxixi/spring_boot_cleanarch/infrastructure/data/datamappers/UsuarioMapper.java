@@ -6,7 +6,7 @@ import com.rafaelcaxixi.spring_boot_cleanarch.infrastructure.entities.UsuarioEnt
 public class UsuarioMapper {
 
     public UsuarioEntity toEntity(UsuarioDomain domain) {
-        return new UsuarioEntity(domain.login(), domain.senha());
+        return new UsuarioEntity(domain.getLogin(), domain.getSenha());
     }
 
     public UsuarioDomain toDomain(UsuarioEntity entity) {
