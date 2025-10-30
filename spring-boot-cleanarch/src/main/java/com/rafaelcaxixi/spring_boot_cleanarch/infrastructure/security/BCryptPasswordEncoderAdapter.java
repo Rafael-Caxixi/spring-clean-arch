@@ -1,9 +1,10 @@
 package com.rafaelcaxixi.spring_boot_cleanarch.infrastructure.security;
 
+import com.rafaelcaxixi.spring_boot_cleanarch.application.security.PasswordEncoderPort;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-public class BCryptPasswordEncoderAdapter implements PasswordEncoderPort{
+public class BCryptPasswordEncoderAdapter implements PasswordEncoderPort {
 
     private final PasswordEncoder encoder;
 

@@ -6,11 +6,10 @@ import com.rafaelcaxixi.spring_boot_cleanarch.infrastructure.data.datamappers.Us
 import com.rafaelcaxixi.spring_boot_cleanarch.infrastructure.data.repositories.UsuarioJpaRepository;
 import com.rafaelcaxixi.spring_boot_cleanarch.infrastructure.data.repositories.impl.UsuarioRepositoryImpl;
 import com.rafaelcaxixi.spring_boot_cleanarch.infrastructure.security.BCryptPasswordEncoderAdapter;
-import com.rafaelcaxixi.spring_boot_cleanarch.infrastructure.security.PasswordEncoderPort;
+import com.rafaelcaxixi.spring_boot_cleanarch.application.security.PasswordEncoderPort;
 import com.rafaelcaxixi.spring_boot_cleanarch.infrastructure.web.mappers.UsuarioDTOMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 public class UsuarioConfig {

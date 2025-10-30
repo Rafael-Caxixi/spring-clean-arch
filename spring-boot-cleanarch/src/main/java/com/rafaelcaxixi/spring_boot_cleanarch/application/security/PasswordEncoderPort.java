@@ -1,4 +1,4 @@
-package com.rafaelcaxixi.spring_boot_cleanarch.infrastructure.security;
+package com.rafaelcaxixi.spring_boot_cleanarch.application.security;
 
 public interface PasswordEncoderPort {
     String encode(String rawPassword);

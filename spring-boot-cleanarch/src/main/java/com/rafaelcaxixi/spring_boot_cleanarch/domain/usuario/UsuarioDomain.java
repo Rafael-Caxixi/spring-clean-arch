@@ -1,6 +1,6 @@
 package com.rafaelcaxixi.spring_boot_cleanarch.domain.usuario;
 
-import com.rafaelcaxixi.spring_boot_cleanarch.infrastructure.security.PasswordEncoderPort;
+import com.rafaelcaxixi.spring_boot_cleanarch.application.security.PasswordEncoderPort;
 
 public class UsuarioDomain{
     private String login;
