@@ -21,12 +21,13 @@ jobs:
 
       - name: Build com Maven
         run: mvn clean package -DskipTests
+        working-directory: ./app
 
       - name: Upload artifact para o job de deploy
         uses: actions/upload-artifact@v3
         with:
           name: java-app
-          path: target/*.jar
+          path: app/target/*.jar
 
   deploy:
     runs-on: ubuntu-latest
@@ -47,4 +48,4 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: spring-cleanarch
-          package: '*.jar'
+          package: java-app/*.jar
