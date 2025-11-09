@@ -24,7 +24,9 @@ jobs:
       
       - name: Build Initial with Maven
         working-directory: ./spring-boot-cleanarch
-        run: ./mvnw --batch-mode clean package
+        run: |
+            chmod +x mvnw
+            ./mvnw --batch-mode clean package
     
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
