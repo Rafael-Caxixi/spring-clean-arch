@@ -7,10 +7,7 @@ import com.rafaelcaxixi.spring_boot_cleanarch.infrastructure.web.dto.response.Us
 import com.rafaelcaxixi.spring_boot_cleanarch.infrastructure.web.mappers.UsuarioDTOMapper;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/usuarios")
@@ -29,6 +26,11 @@ public class UsuarioController {
         UsuarioDomain usuarioDomain = usuarioDTOMapper.toDomain(usuarioDto.login(), usuarioDto.senha());
         UsuarioDomain usuarioDomainCriado = criarUsuarioUseCase.execute(usuarioDomain);
         return ResponseEntity.ok(usuarioDTOMapper.toResponseDTO(usuarioDomainCriado));
+    }
+
+    @GetMapping("/hello-world")
+    public ResponseEntity<String> helloWorld() {
+        return ResponseEntity.ok("Hello, World!");
     }
 
 }
